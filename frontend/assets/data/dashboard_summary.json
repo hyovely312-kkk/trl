@@ -1,0 +1,25 @@
+{
+  "dataset": {
+    "n_total": 14090,
+    "n_train": 9863,
+    "n_valid": 2113,
+    "n_test": 2114,
+    "label_distribution": {
+      "Low": 4183,
+      "Mid": 8832,
+      "High": 1075
+    },
+    "input_path": "TRL_NASA_cleaned_dataset.xlsx",
+    "sheet": "Main_Data"
+  },
+  "best_model_by_macro_f1": "alg1_full_fusion",
+  "best_deployment_safe_model": "alg2_no_start_pseudo_start",
+  "best_model_by_accuracy": "alg1_full_fusion",
+  "best_deployment_safe_model_by_accuracy": "alg4_gridsearched_svc_retrieval",
+  "notes": [
+    "Algorithm 1 includes Start TRL and should be interpreted as upper-bound.",
+    "Algorithm 2, 3, and 4 exclude Start TRL and are deployment-safe.",
+    "Algorithm 4 performs validation grid search over TF-IDF text blocks, optional pseudo/rubric features, and linear classifiers.",
+    "Description is the primary TRL text field; title and benefits are auxiliary only."
+  ]
+}
