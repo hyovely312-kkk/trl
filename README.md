@@ -4,9 +4,9 @@ Static dashboard, FastAPI backend prototype, and reproducible TRL experiment cod
 
 > Note: dataset-derived logs, predictions, and experiment outputs are intentionally excluded from the public repository. Generate them locally with `trl_experiments/run_all_experiments.py`.
 
-## Frontend
+## GitHub Pages
 
-Open `frontend/index.html` locally or use GitHub Pages after deployment.
+The repository deploys a static dashboard with GitHub Actions Pages workflow. The dashboard opens at `frontend/index.html`.
 
 ## Backend
 
