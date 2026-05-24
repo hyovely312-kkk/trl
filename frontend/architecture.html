@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Architecture</title><link rel="stylesheet" href="assets/css/style.css"><script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script></head>
+<body><div class="app-shell"><aside class="sidebar"><div class="brand"><strong>TRL Agentic Reasoning Dashboard</strong><span>system architecture</span></div><nav class="nav"><a href="index.html">Dashboard</a><a href="input.html">Project Input</a><a href="result.html">Result</a><a href="agents.html">Agent Logs</a><a href="events.html">Events</a><a href="architecture.html">Architecture</a><a href="rules.html">Rules</a></nav></aside><main class="main"><header class="topbar"><div><h1>System Architecture</h1><p>Description-centered data flow, Agent algorithms, Fusion, and dashboard exports.</p></div><div class="api-pill"><span class="muted">API</span><input data-api-base></div></header><section class="panel"><pre class="mermaid">flowchart TD
+  A[Raw Excel Project Data] --> B[Preprocessing Layer]
+  B --> C[Description Primary Text]
+  C --> D1[Retrieval Similarity Agent]
+  C --> D2[Pseudo-Start TRL Agent]
+  C --> D3[Rubric Evidence Agent]
+  B --> M[Program / Primary TX Metadata]
+  D1 --> F[Fusion Decision Agent]
+  D2 --> F
+  D3 --> F
+  M --> F
+  F --> E[Explanation Agent]
+  E --> G[Dashboard / Event Log]
+</pre></section><section class="grid two-col" id="algorithmArchitectures" style="margin-top:16px"></section><section class="panel" style="margin-top:16px"><div class="section-title"><h2>Backend Agent Definitions</h2></div><pre id="agentDefinitions" class="json-view"></pre></section></main></div><script>mermaid.initialize({startOnLoad:true,theme:'dark'});</script><script src="assets/js/config.js"></script><script src="assets/js/api.js"></script><script src="assets/js/architecture.js"></script></body></html>
