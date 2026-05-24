@@ -6,20 +6,16 @@
     "n_train": 9863,
     "n_valid": 2113,
     "n_test": 2114,
-    "label_distribution": {
-      "Low": 4183,
-      "Mid": 8832,
-      "High": 1075
-    },
+    "label_distribution": { "Low": 4183, "Mid": 8832, "High": 1075 },
     "sheet": "Main_Data",
     "primary_text_field": "Description",
     "auxiliary_fields": ["Project Title", "Benefits", "Program", "Primary TX"]
   },
   "models": {
-    "alg1_full_fusion": { "uses_start_trl": true, "test_accuracy": 0.7568590350047304, "test_macro_f1": 0.6764852106679492, "test_mae": 0.24739829706717123 },
-    "alg2_no_start_pseudo_start": { "uses_start_trl": false, "test_accuracy": 0.6579943235572374, "test_macro_f1": 0.5547328990274214, "test_mae": 0.36281929990539263 },
-    "alg3_rubric_explainable": { "uses_start_trl": false, "test_accuracy": 0.6466414380321666, "test_macro_f1": 0.5379283080570348, "test_mae": 0.37322611163670766 },
-    "alg4_gridsearched_svc_retrieval": { "uses_start_trl": false, "test_accuracy": 0.7086092715231788, "test_macro_f1": 0.4834375816452458, "test_mae": 0.29375591296121095 }
+    "alg1_full_fusion": { "uses_start_trl": true, "test_accuracy": 0.7568590350047304, "test_macro_f1": 0.6764852106679492, "test_mae": 0.24739829706717123, "mean_confidence": 0.6709266597529678 },
+    "alg2_no_start_pseudo_start": { "uses_start_trl": false, "test_accuracy": 0.6579943235572374, "test_macro_f1": 0.5547328990274214, "test_mae": 0.36281929990539263, "mean_confidence": 0.5841898201566386 },
+    "alg3_rubric_explainable": { "uses_start_trl": false, "test_accuracy": 0.6466414380321666, "test_macro_f1": 0.5379283080570348, "test_mae": 0.37322611163670766, "mean_confidence": 0.7907053545141429 },
+    "alg4_gridsearched_svc_retrieval": { "uses_start_trl": false, "test_accuracy": 0.7086092715231788, "test_macro_f1": 0.4834375816452458, "test_mae": 0.29375591296121095, "mean_confidence": 0.6942505556686298 }
   },
   "best_model_by_macro_f1": "alg1_full_fusion",
   "best_deployment_safe_model": "alg2_no_start_pseudo_start",
